@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import galleryItems from '../../../server/modules/gallery.data';
+import galleryItems from './Gallery/GalleryItems.jsx';
 
 function App() {
   axios({
@@ -21,16 +21,9 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        {galleryItems.map(item => (
           <div id="gallery-container">
-            <div key={item.id}>
-              <div>Image:{item.path}</div>
-              <div>Description{item.description}</div>
-              <button>love it!</button>
-              <div>Likes:{item.likes}</div>
-            </div>
+            <GalleryItems galleryItems={galleryItems} />
           </div>
-        ))}
         <img src="images/goat_small.jpg"/>
       </div>
     );
