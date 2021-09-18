@@ -27,7 +27,6 @@ function GalleryItem(props) {
                         {/* If isDescribed is true, display the description */}
                         { isDescribed && <p>{item.description}</p>}
                     </div>
-                    <div className="item-description">{item.description}</div>
                     <button className="love-button">love this!</button>
                     <div className="likes-num">{item.likes}</div>
                 </div>
