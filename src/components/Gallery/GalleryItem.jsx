@@ -1,9 +1,10 @@
+import { useState, useEffect} from 'react';
 
 function GalleryItem(props) {
 
     // If image is displayed change image to item description
     // if item description is displayed change description back to image
-    const displayDescription = () => {
+    const displayDescriptionOrImage = () => {
         if ( /* image is displayed */ ){
             <p>{item.description}</p> // display description
         } else /* if description is displayed */ { 
@@ -18,7 +19,7 @@ function GalleryItem(props) {
                 when image div is clicked */}
             {props.list.map(item => (
                 <div>
-                    <div key={item.id} onClick={() => displayDescription(item.description)}>
+                    <div key={item.id} onClick={() => displayDescriptionOrImage(item.description)}>
                         <img src={item.path}></img>
                     </div>
                     <div className="item-description">{item.description}</div>
