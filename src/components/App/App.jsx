@@ -30,8 +30,8 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <GalleryItems list={gallery} />
-        <GalleryItem list={gallery[0]} />
-        <img src="images/goat_small.jpg"/>
+        <GalleryItem list={gallery} />
+        {/* <img src="images/goat_small.jpg"/> */}
       </div>
     );
 }
