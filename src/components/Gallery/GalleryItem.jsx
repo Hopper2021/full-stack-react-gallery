@@ -2,16 +2,15 @@ import { useState } from 'react';
 
 function GalleryItem(props) {
 
-    const [imageDisplayed, setImageDisplayed] = useState(true);
+    const [isDescribed, setDescription] = useState(true);
 
     // If image is displayed change image to item description
     // if item description is displayed change description back to image
     const toggleDescription = () => {
-        if ( /* image is displayed */ ){
-            <p>{item.description}</p> // display description
-        } else /* if description is displayed */ { 
-            <img src={item.path}></img> // display image
-        }
+        // Verify clicked div, and logging the correct description
+        console.log('Clicked the div!');
+        // When image div is clicked, change useState to the opposite of its current boolean
+        setDescription(!isDescribed);
     }
     return(
         <div>
@@ -22,7 +21,10 @@ function GalleryItem(props) {
             {props.list.map(item => (
                 <div>
                     <div key={item.id} onClick={toggleDescription}>
-                        <img src={item.path}></img>
+                        {/* If isDescribed is false, display the image */}
+                        {!isDescribed && <img src={item.path}></img>}
+                        {/* If isDescribed is true, display the description */}
+                        { isDescribed && <p>{item.description}</p>}
                     </div>
                     <div className="item-description">{item.description}</div>
                     <button className="love-button">love this!</button>
