@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import './GalleryItem.css';
 
 function GalleryItem(props) {
-
-    const [isDescribed, setDescription] = useState(true);
+    // useState defines isDescribed as default true
+    const [isDescribed, setDescription] = useState(false);
 
     // If image is displayed change image to item description
     // if item description is displayed change description back to image
