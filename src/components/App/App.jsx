@@ -32,6 +32,7 @@ function App() {
         <GalleryItems list={gallery} />
         <GalleryItem list={gallery} />
         {/* <img src="images/goat_small.jpg"/> */}
+        {/* GHOST GOAT */}
       </div>
     );
 }
