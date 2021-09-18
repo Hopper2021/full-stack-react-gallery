@@ -1,4 +1,9 @@
-p {
+.image-container, img {
+    margin: auto;
     height: 100px;
     width: 100px;
+    border-style: solid 1px black;
+}
+.love-button {
+    margin: 10px;
 }

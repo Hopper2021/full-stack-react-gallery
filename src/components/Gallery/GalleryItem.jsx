@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './GalleryItem.css';
+import '../Gallery/GalleryItem.css';
 
 function GalleryItem(props) {
     // useState defines isDescribed as default true
@@ -21,7 +21,7 @@ function GalleryItem(props) {
                 when image div is clicked */}
             {props.list.map(item => (
                 <div>
-                    <div key={item.id} onClick={toggleDescription}>
+                    <div className ="image-container"key={item.id} onClick={toggleDescription}>
                         {/* If isDescribed is false, display the image */}
                         {!isDescribed && <img src={item.path}></img>}
                         {/* If isDescribed is true, display the description */}
@@ -29,7 +29,7 @@ function GalleryItem(props) {
                     </div>
                     <div className="item-description">{item.description}</div>
                     <button className="love-button">love this!</button>
-                    <div>{item.likes}</div>
+                    <div className="likes-num">{item.likes}</div>
                 </div>
             ))}
         </div>
