@@ -2,9 +2,16 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import galleryItems from './Gallery/GalleryItems.jsx';
+import GalleryItems from '../Gallery/GalleryItems'
 
 function App() {
+  let [gallery, setGallery] = useState([]);
+
+  useEffect(() => {
+    getGallery()
+  }, [])
+
+  const getGallery = () => {
   axios({
     method: 'GET',
     url: '/gallery'
@@ -14,16 +21,14 @@ function App() {
     alert('Something went wrong!');
     console.log('Error in GET,', error);
   })
+  }
 
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-          <div id="gallery-container">
-            <GalleryItems galleryItems={galleryItems} />
-          </div>
+        <GalleryItems list={gallery} />
         <img src="images/goat_small.jpg"/>
       </div>
     );

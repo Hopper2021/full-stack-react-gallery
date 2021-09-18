@@ -1,11 +1,8 @@
 
-import React from 'react';
-import './GalleryItems.css';
-
-function GalleryItems({galleryItems}) {
+function GalleryItems(props) {
     return(
         <div>
-            {galleryItems.map(item => (
+            {props.list.map(item => (
                 <div className="gallery-item">
                     <div>{item.id}</div>
                     <div>{item.path}</div>
