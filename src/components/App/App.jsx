@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryItems from '../Gallery/GalleryItems'
+import GalleryItem from '../Gallery/GalleryItem'
 
 function App() {
   let [gallery, setGallery] = useState([]);
@@ -29,6 +30,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <GalleryItems list={gallery} />
+        <GalleryItem list={gallery[0]} />
         <img src="images/goat_small.jpg"/>
       </div>
     );
