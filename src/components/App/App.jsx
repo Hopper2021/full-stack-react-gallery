@@ -4,13 +4,17 @@ import axios from 'axios';
 import './App.css';
 import GalleryItems from '../Gallery/GalleryItems'
 
+
 function App() {
+  // define an empty array for my gallery images
   let [gallery, setGallery] = useState([]);
 
+  // renders gallery on page load
   useEffect(() => {
     getGallery()
   }, [])
-
+  // Get method that is sent the images from my gallery
+  // then passes those images to setGallery to exist on the DOM
   const getGallery = () => {
   axios({
     method: 'GET',
@@ -22,18 +26,21 @@ function App() {
     console.log('Error in GET,', error);
   })
   }
-
+  // PUT method that is passed the itemid
+  // then updates the DOM based on the button pressed 
+  // (functions in GalleryItem)
   const likeItem = (itemId) => {
     axios({
       method: 'PUT',
       url: `/gallery/like/${itemId}`
     }).then((response) => {
-      getGallery();
+      getGallery(response);
     }).catch((error) => {
       console.log(error);
     })
   }
 
+  // renders GalleryItems list that loops through the gallery Array
     return (
       <div className="App">
         <header className="App-header">
