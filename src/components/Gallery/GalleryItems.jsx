@@ -5,7 +5,7 @@ function GalleryItems({list, likeItem}) {
         <div>
             {/* Loop through gallery */}
             {list.map(item => (
-                <GalleryItem key={item.id} item={item} likeItem={likeItem}/> // TODO item={item might be wrong...}
+                <GalleryItem key={item.id} item={item} likeItem={likeItem}/>
             ))}
         </div>
     );

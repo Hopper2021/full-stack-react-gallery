@@ -1,9 +1,7 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Gallery of My Life
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This is a gallery of my life! It contains photos of things that are near and dear to my heart. Click on each image to render a description of it, click it again to bring the image back. The `love it` button increases the number of reactions below the button with each click.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).

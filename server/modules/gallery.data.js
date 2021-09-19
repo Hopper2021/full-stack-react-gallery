@@ -1,38 +1,38 @@
 const galleryItems = [
     { 
         id: 1, 
-        path: 'images/goat_small.jpg', 
-        description: 'Photo of a goat taken at Glacier National Park.', 
+        path: 'images/husband.jpeg', 
+        description: 'Photo of me and my husband.', 
         likes: 0 
     },
     { 
         id: 2, 
-        path: 'images/goat_small.jpg', 
-        description: 'Photo of a goat taken at Glacier National Park.', 
+        path: 'images/cosplay.jpeg', 
+        description: 'Photo of my us cosplaying together.', 
         likes: 0 
     },
     { 
         id: 3, 
-        path: 'images/goat_small.jpg', 
-        description: 'Photo of a goat taken at Glacier National Park.', 
+        path: 'images/kiddo.jpeg', 
+        description: 'Photo of my daughter.', 
         likes: 0 
     },
     { 
         id: 4, 
-        path: 'images/goat_small.jpg', 
-        description: 'Photo of a goat taken at Glacier National Park.', 
+        path: 'images/military.jpeg', 
+        description: 'Photo of me when I was in the Navy.', 
         likes: 0 
     },
     { 
         id: 5, 
-        path: 'images/goat_small.jpg', 
-        description: 'Photo of a goat taken at Glacier National Park.', 
+        path: 'images/amtgard.jpeg', 
+        description: 'Photo of me playing Amtgard (a larp).', 
         likes: 0 
     },
     { 
         id: 6, 
-        path: 'images/goat_small.jpg', 
-        description: 'Photo of a goat taken at Glacier National Park.', 
+        path: 'images/family.jpeg', 
+        description: 'Photo of my husband and my daughter.', 
         likes: 0 
     }
 ];
