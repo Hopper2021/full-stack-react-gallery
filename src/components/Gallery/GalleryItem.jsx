@@ -32,7 +32,7 @@ function GalleryItem({item}) {
     }
 
     return(
-        <div className="item">
+        <div class="item">
             {
                 isDescribed ? ( 
                     <div className="image-container">
@@ -46,11 +46,13 @@ function GalleryItem({item}) {
                     </div>
                 )
             }
-            <button 
-                onClick={() => likeItem(item.id)} c
-                lassName="love-button">
-                        love this!</button>
-            <p className="like-num">{item.likes}</p>
+            <div>
+                <button 
+                    onClick={() => likeItem(item.id)} c
+                    lassName="love-button">
+                            love this!</button>
+                <p className="like-num">{item.likes}</p>
+            </div>
         </div>
     )
 }

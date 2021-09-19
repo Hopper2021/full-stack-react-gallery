@@ -1,17 +1,19 @@
-#item-container {
-    display: block;
-    margin: auto;
-    height: 150px;
-    width: 150px;
+.item {
+    display: inline-block;
     text-align: center;
+    padding-bottom: 30px;
+    margin: 40px;
 }
 img {
-    margin: 20px;
-    height: 200px;
-    width: 200px;
-    border-style: solid 1px;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-color: black;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
 }
 .love-button {
-    text-align:center;
+    text-align: center;
     margin: 10px;
 }
