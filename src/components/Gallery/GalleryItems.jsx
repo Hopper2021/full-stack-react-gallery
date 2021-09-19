@@ -15,4 +15,5 @@ function GalleryItems({list, likeItem}) {
     );
 }
 
+// export so that this component is available in App.jsx
 export default GalleryItems;

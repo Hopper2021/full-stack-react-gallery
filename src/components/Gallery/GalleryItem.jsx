@@ -32,7 +32,7 @@ function GalleryItem({item}) {
     }
 
     return(
-        <div>
+        <div className="item">
             {
                 isDescribed ? ( 
                     <div className="image-container">
