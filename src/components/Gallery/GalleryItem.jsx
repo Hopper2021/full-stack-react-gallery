@@ -35,9 +35,11 @@ function GalleryItem({item}) {
         <div class="item">
             {
                 isDescribed ? ( 
-                    <div className="image-container">
-                        <div onClick={() => toggleImage(item.id)}>
-                            {item.description}</div> 
+                    <div className="description-container"
+                    onClick={() => toggleImage(item.id)}>
+                        <div className="description">
+                            <p>{item.description}</p>
+                        </div> 
                     </div>
                 ) : (
                     <div className="image-container">

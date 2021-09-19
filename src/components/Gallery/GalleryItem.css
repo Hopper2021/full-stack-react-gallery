@@ -5,6 +5,16 @@
     background-color: rgb(55, 46, 52);
     border-radius: 10%;
 }
+.description-container {
+    height: 300px;
+    width: 300px;
+}
+.description {
+    padding: 100px;
+}
+p {
+    vertical-align: middle;
+}
 img {
     height: 300px;
     width: 300px;
