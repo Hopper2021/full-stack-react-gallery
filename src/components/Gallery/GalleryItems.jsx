@@ -1,10 +1,11 @@
+import GalleryItem from '../Gallery/GalleryItem';
 
 function GalleryItems(props) {
     return(
         <div>
+            {/* Loop through gallery */}
             {props.list.map(item => (
-                <div className="gallery-item">
-                </div>
+                <GalleryItem key={item.id} item={item}/> // TODO item={item might be wrong...}
             ))}
         </div>
     );

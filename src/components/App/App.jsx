@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryItems from '../Gallery/GalleryItems'
-import GalleryItem from '../Gallery/GalleryItem'
 
 function App() {
   let [gallery, setGallery] = useState([]);
@@ -24,15 +23,24 @@ function App() {
   })
   }
 
+  const likeItem = (itemId) => {
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${itemId}`
+    }).then((response) => {
+      getGallery();
+    }).catch((error) => {
+      console.log(error);
+    })
+  }
+
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <GalleryItems list={gallery} />
-        <GalleryItem list={gallery} />
         {/* <img src="images/goat_small.jpg"/> */}
-        {/* GHOST GOAT */}
       </div>
     );
 }

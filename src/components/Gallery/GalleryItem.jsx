@@ -15,13 +15,13 @@ function GalleryItem(props) {
     }
     return(
         <div>
-            {/* - Loop through GalleryItems passed in from App.jsx
+            {/* - Loop through GalleryItems passed in from GalleryItems
                 - display image, love button and number of likes
                 - conditionally render description in place of image
                 when image div is clicked */}
             {props.list.map(item => (
-                <div>
-                    <div className ="image-container"key={item.id} onClick={toggleDescription}>
+                <div className="item-container">
+                    <div className ="image-container"key={item.id} onClick={() => toggleDescription(item.id)}>
                         {/* If isDescribed is false, display the image */}
                         {!isDescribed && <img src={item.path}></img>}
                         {/* If isDescribed is true, display the description */}

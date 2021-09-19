@@ -1,8 +1,14 @@
-.image-container, img {
+#item-container {
+    display: block;
     margin: auto;
-    height: 100px;
-    width: 100px;
-    border-style: solid 1px black;
+    width: 50%;
+    text-align: center;
+}
+img {
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+    border-style: solid 1px;
 }
 .love-button {
     margin: 10px;
