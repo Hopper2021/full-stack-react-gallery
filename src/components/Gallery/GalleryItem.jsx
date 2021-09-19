@@ -46,11 +46,11 @@ function GalleryItem({item}) {
                     </div>
                 )
             }
-            <div>
+            <div className="like-container">
                 <button 
-                    onClick={() => likeItem(item.id)} c
-                    lassName="love-button">
-                            love this!</button>
+                    onClick={() => likeItem(item.id)} 
+                    className="love-button">
+                            ♥</button>
                 <p className="like-num">{item.likes}</p>
             </div>
         </div>

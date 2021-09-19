@@ -4,7 +4,6 @@ import axios from 'axios';
 import './App.css';
 import GalleryItems from '../Gallery/GalleryItems'
 
-
 function App() {
   // define an empty array for my gallery images
   let [gallery, setGallery] = useState([]);
