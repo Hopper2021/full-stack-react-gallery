@@ -1,36 +1,56 @@
 import { useState } from 'react';
 import '../Gallery/GalleryItem.css';
 
-function GalleryItem(props) {
+function GalleryItem({item}) {
     // useState defines isDescribed as default true
     const [isDescribed, setDescription] = useState(false);
+    // useState defines the default number of likes
+    const [like, setLike] = useState('');
 
-    // If image is displayed change image to item description
-    // if item description is displayed change description back to image
-    const toggleDescription = () => {
-        // Verify clicked div, and logging the correct description
-        console.log('Clicked the div!');
-        // When image div is clicked, change useState to the opposite of its current boolean
-        setDescription(!isDescribed);
+    {/* If image is clicked
+        display description */}
+    const toggleDescription = (itemId) => {
+        // Verify description has been clicked
+        console.log('Clicked the description!');
+        // Changes ithis itemId's isDescribed to true
+        setDescription(itemId);
     }
+
+    {/* If description is clicked
+        display image */}
+    const toggleImage = (itemId) => {
+        console.log('Clicked the Image!');
+        // changes this itemId's isDescribed to false
+        setDescription(!itemId);
+    }
+
+    {/* If love this! button is clicked
+        item.likes + 1 */}
+    const likeItem = () => {
+        console.log('Clicked love this!');
+        setLike(item.likes++);
+    }
+
     return(
         <div>
-            {/* - Loop through GalleryItems passed in from GalleryItems
-                - display image, love button and number of likes
-                - conditionally render description in place of image
-                when image div is clicked */}
-            {props.list.map(item => (
-                <div className="item-container">
-                    <div className ="image-container"key={item.id} onClick={() => toggleDescription(item.id)}>
-                        {/* If isDescribed is false, display the image */}
-                        {!isDescribed && <img src={item.path}></img>}
-                        {/* If isDescribed is true, display the description */}
-                        { isDescribed && <p>{item.description}</p>}
+            {
+                isDescribed ? ( 
+                    <div className="image-container">
+                        <p onClick={() => toggleImage(item.id)}>
+                            {item.description}</p> 
                     </div>
-                    <button className="love-button">love this!</button>
-                    <div className="likes-num">{item.likes}</div>
-                </div>
-            ))}
+                ) : (
+                    <div className="image-container">
+                        <img onClick={() => toggleDescription(item.id)}
+                            src={item.path}></img>
+                    </div>
+                )
+            }
+            <button 
+                onClick={() => likeItem(item.id)} c
+                lassName="love-button">
+                        love this!</button>
+            <p className="like-num">{item.likes}</p>
         </div>
     )
 }
